@@ -28,11 +28,9 @@ public class aiffSuperPlayer {
         //posição (setCursor).
     }
     
-    public int setCursor(){
-        int i =0;
+    public void setCursor(int cursor){
         //O método setCursor(int) define uma nova posição (segundos) do arquivo. Pode estar em reprodução ou
         //parado.
-        return i;
     }
     
     public void release(){
