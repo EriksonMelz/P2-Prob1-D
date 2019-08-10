@@ -28,4 +28,19 @@ public class wavPlayer {
         //reprodução do arquivo.
         return i;
     }
+    
+    public void play(){
+        //O método play() reproduz o arquivo aberto com o método open(). O arquivo de áudio começa a ser
+        //reproduzido a partir da posição indicada pelo método setLocation.
+    }
+    
+    public void stop(){
+        //O método stop() para a reprodução do arquivo. Caso a próxima mensagem seja play(), reinicia a execução do
+        //ponto onde parou. Caso seja stop(), volta ao início do arquivo (setLocation(0)).
+    }
+    
+    public void open(){
+        //O método open() é utilizado para abrir o arquivo definido pelo método
+        //setFile(). Porém, não define qual é o ponto inicial de reprodução.
+    }
 }
