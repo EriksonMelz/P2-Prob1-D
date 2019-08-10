@@ -8,6 +8,6 @@
  *
  * @author eamelz
  */
-public class formatoPadrao {
+public class wmaPlayer {
     
 }
