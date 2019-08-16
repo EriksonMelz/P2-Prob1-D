@@ -8,22 +8,26 @@
  *
  * @author eamelz
  */
-public class MP3DJ {
+public abstract class MP3DJ implements FormatoAudio{
 
+    @Override
     public void setFile(String nome) {
         //O método setFile() recebe o nome do arquivo a ser aberto e o abre, deixandoo pronto para execução.
     }
 
+    @Override
     public void play() {
 //        O método play() reproduz o arquivo aberto, a partir do ponto em que se encontra.
 
     }
 
+    @Override
     public void stop() {
 //        O método stop() para a reprodução do arquivo. Pode ser retomado do ponto em que parou com play().
 
     }
 
+    @Override
     public int forward(int segundos) {
         int i = 0;
 //        O método forward(int) recebe como parâmetro um valor em segundos em
@@ -32,6 +36,7 @@ public class MP3DJ {
         return i;
     }
 
+    @Override
     public int reward(int segundos) {
         int i = 0;
 //        O método reward(int) recebe como parâmetro um valor em segundos em que deve ocorrer um salto para trás
