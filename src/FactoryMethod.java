@@ -12,15 +12,15 @@ public class FactoryMethod {
     
     public FormatoAudio getPlayer(String ext){
         if (ext.equalsIgnoreCase("MP3DJ"))
-            return new MP3DJ();
+            return new MP3DJAdapter();
         if (ext.equalsIgnoreCase("AIFF"))
-            return new aiffSuperPlayer("");
+            return new aiffSuperPlayerAdapter("");
         if (ext.equalsIgnoreCase("WAV"))
-            return new wavPlayer();
+            return new wavPlayerAdapter();
         if (ext.equalsIgnoreCase("WMA"))
-            return new wmaPlayer();
-        
+            return new wmaPlayerAdapter();
+        if(ext.equalsIgnoreCase("AACP"))
+            return new AACPlayerAdapter("");
         return null;
     }
-    
 }

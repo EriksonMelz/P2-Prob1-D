@@ -8,6 +8,6 @@
  *
  * @author eamelz
  */
-public class Adapter {
-    
+public interface FactoryMethodAbstract<fac> {
+    fac create(String type);
 }
