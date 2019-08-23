@@ -1,0 +1,12 @@
+Padrao Factory:
+  FactoryMethod
+  
+Padrao Façade:
+  Facade
+
+Padrão Adapter:
+  AACPlayerAdapter
+  MP3DJAdapter
+  aiffSuperPlayerAdapter
+  wavPlayerAdapter
+  wmaPlayerAdapter
