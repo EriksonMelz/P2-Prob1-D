@@ -8,26 +8,17 @@
  *
  * @author eamelz
  */
-public abstract class wmaPlayer implements FormatoAudio{
-    
-    @Override
-    public void setFile(String nome){
+public class wmaPlayer implements FormatoAudio{
+       
+    private void setFile(String nome){
         /*
         O método setFile() é utilizado para definir o nome do arquivo que será
 utilizado pelo objeto de reprodução de arquivos wma
         */
         System.out.println("Método setFile iniciado!");
     }
-    @Override
-    public void open(){
-        /*
-        O método open() é utilizado para abrir o arquivo definido pelo método
-setFile(). Porém, não define qual é o ponto inicial de reprodução.
-        */
-        System.out.println("Método open iniciado!");
-    }
-    
-    public int setLocation(){
+      
+    private int setLocation(){
        
         int i = 0;
         /*
@@ -38,8 +29,7 @@ deve-se fornecer como argumento o valor “0”.
         System.out.println("Método setLocation iniciado!");
         return i;
     }
-    
-    @Override
+        
     public int getLocation(){
         int i = 0;
         /*
@@ -51,22 +41,48 @@ reprodução do arquivo.
     }
     
     @Override
-    public void play(){
-        /*
-        O método play() reproduz o arquivo aberto com o método open(). O arquivo de áudio começa a ser
-reproduzido a partir da posição indicada pelo método setLocation. 
-        */
+    public void play() {
+//        O método play() reproduz o arquivo aberto, a partir do ponto em que se encontra.
         System.out.println("Método play iniciado!");
     }
-    
+
     @Override
-    public void stop(){
-        /*
-        O método stop() para a reprodução do arquivo. Caso a próxima mensagem seja play(), reinicia a execução do
-ponto onde parou. Caso seja stop(), volta ao início do arquivo (setLocation(0)).
-        */
+    public void stop() {
+//        O método stop() para a reprodução do arquivo. Pode ser retomado do ponto em que parou com play().
         System.out.println("Método stop iniciado!");
     }
-    
-    
+
+    @Override
+    public int forward(int segundos) {
+        int i = 0;
+//        O método forward(int) recebe como parâmetro um valor em segundos em
+//que deve ocorrer um salto para frente na posição do arquivo. Seu retorno é
+//a nova posição, também em segundos.
+        System.out.println("Método forward iniciado!");
+        return i;
+    }
+
+    @Override
+    public int rewind(int segundos) {
+        int i = 0;
+//        O método reward(int) recebe como parâmetro um valor em segundos em que deve ocorrer um salto para trás
+//na posição do arquivo. Seu retorno é a nova posição, também em segundos.
+        System.out.println("Método rewind iniciado!");
+        return i;
+    }
+
+    @Override
+    public void pause() {
+        System.out.println("Método pause iniciado!");
+    }
+
+    @Override
+    public void release() {
+        System.out.println("Método release iniciado!");
+    }
+
+    @Override
+    public void open(String nomeArquivo) {
+        System.out.println("Método open iniciado!");        
+    }       
 }

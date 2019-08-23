@@ -8,7 +8,7 @@
  *
  * @author eamelz
  */
-public abstract class aiffSuperPlayer implements FormatoAudio{
+public class aiffSuperPlayer implements FormatoAudio{
     //O construtor recebe o nome do arquivo a ser aberto e o abre,
     //deixando-o pronto para execução.
         
@@ -24,31 +24,50 @@ public abstract class aiffSuperPlayer implements FormatoAudio{
     }
     
     @Override
-    public void pause(){
-        //O método pause() para a reprodução do arquivo, retornando a
-        //posição (segundos) em que se encontra.
-        System.out.println("Método pause iniciado!");
-    }
-    
-    @Override
     public void stop(){
         //O método stop() para definitivamente a reprodução do arquivo. Não
         //pode ser retomado por play() sem que antes seja definida uma
         //posição (setCursor).
         System.out.println("Método stop iniciado!");
-    }
-    
-    @Override
-    public void setCursor(int cursor){
+    }   
+       
+    private void setCursor(int cursor){
         //O método setCursor(int) define uma nova posição (segundos) do arquivo. Pode estar em reprodução ou
         //parado.
         System.out.println("Método setCursor iniciado!");
     }
-    
+
     @Override
-    public void release(){
-        //O método release() libera o arquivo da memória. Caso o arquivo esteja em reprodução, ele primeiro para
-        //(stop).
-        System.out.println("Método release iniciado!");       
+    public int forward(int segundos) {
+        int i = 0;
+//        O método forward(int) recebe como parâmetro um valor em segundos em
+//que deve ocorrer um salto para frente na posição do arquivo. Seu retorno é
+//a nova posição, também em segundos.
+        System.out.println("Método forward iniciado!");
+        return i;
+    }
+
+    @Override
+    public int rewind(int segundos) {
+        int i = 0;
+//        O método reward(int) recebe como parâmetro um valor em segundos em que deve ocorrer um salto para trás
+//na posição do arquivo. Seu retorno é a nova posição, também em segundos.
+        System.out.println("Método rewind iniciado!");
+        return i;
+    }
+
+    @Override
+    public void pause() {
+        System.out.println("Método pause iniciado!");
+    }
+
+    @Override
+    public void release() {
+        System.out.println("Método release iniciado!");
+    }
+
+    @Override
+    public void open(String nomeArquivo) {
+        System.out.println("Método open iniciado!");        
     }
 }

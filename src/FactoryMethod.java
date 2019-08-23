@@ -10,4 +10,17 @@
  */
 public class FactoryMethod {
     
+    public FormatoAudio getPlayer(String ext){
+        if (ext.equalsIgnoreCase("MP3DJ"))
+            return new MP3DJ();
+        if (ext.equalsIgnoreCase("AIFF"))
+            return new aiffSuperPlayer("");
+        if (ext.equalsIgnoreCase("WAV"))
+            return new wavPlayer();
+        if (ext.equalsIgnoreCase("WMA"))
+            return new wmaPlayer();
+        
+        return null;
+    }
+    
 }
